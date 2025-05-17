@@ -1,4 +1,6 @@
 
+import { Twitter, Linkedin, Facebook } from 'lucide-react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -7,11 +9,18 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-2xl font-bold text-white mb-2">SoftSell</p>
         <div className="flex justify-center space-x-6 mb-6">
-          {/* Placeholder Social Icons - Lucide doesn't have direct brand icons */}
-          {/* You could use custom SVGs or another icon library here if needed */}
-          <a href="#" className="hover:text-primary transition-colors">Twitter</a>
-          <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-primary transition-colors">Facebook</a>
+          <a href="#" className="hover:text-primary transition-colors flex items-center" aria-label="Twitter">
+            <Twitter className="h-5 w-5 mr-1" /> 
+            <span>Twitter</span>
+          </a>
+          <a href="#" className="hover:text-primary transition-colors flex items-center" aria-label="LinkedIn">
+            <Linkedin className="h-5 w-5 mr-1" />
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" className="hover:text-primary transition-colors flex items-center" aria-label="Facebook">
+            <Facebook className="h-5 w-5 mr-1" />
+            <span>Facebook</span>
+          </a>
         </div>
         <div className="space-x-4 mb-4">
           <a href="#" className="hover:text-primary transition-colors text-sm">Privacy Policy</a>

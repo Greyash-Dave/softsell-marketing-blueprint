@@ -13,15 +13,21 @@ const Hero = () => {
         backgroundPosition: 'center'
       }}
     >
-      <div className="absolute inset-0 bg-black/50"></div> {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div> {/* Overlay increased to 60% */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white animate-fade-in-up">
           Turn Unused Software <br className="hidden sm:inline" />Licenses into <span className="text-accent">Cash</span>
         </h1>
-        <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-200 animate-fade-in-up animation-delay-200">
+        <p 
+          className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-200 animate-fade-in-up"
+          style={{ animationDelay: '0.2s' }}
+        >
           The fastest way to sell your excess software licenses at competitive prices. SoftSell makes it simple, secure, and profitable.
         </p>
-        <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up animation-delay-400">
+        <div 
+          className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up"
+          style={{ animationDelay: '0.4s' }}
+        >
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <a href="#contact">
               Get a Free Valuation
@@ -35,10 +41,6 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <style jsx>{`
-        .animation-delay-200 { animation-delay: 0.2s; }
-        .animation-delay-400 { animation-delay: 0.4s; }
-      `}</style>
     </section>
   );
 };
